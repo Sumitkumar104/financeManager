@@ -1,0 +1,24 @@
+Data Format in Percentage
+The report's response will include income, expenses, and a breakdown of categories in percentages. Here's an example response for a monthly report:
+
+json
+Copy code
+{
+  "report": {
+    "income": 5000,
+    "expenses": 3000,
+    "categories": [
+      { "category": "Food", "percentage": "50.00" },
+      { "category": "Rent", "percentage": "30.00" },
+      { "category": "Entertainment", "percentage": "20.00" }
+    ]
+  },
+  "message": "Monthly report generated successfully"
+}
+Assumptions
+Transactions include a type field with values "income" or "expense".
+Categories are only relevant for expenses.
+Dates in transactions are in ISO format (YYYY-MM-DD).
+Enhancements
+Visualizations (Pie Charts, Bar Graphs) can be implemented in the frontend using libraries like Chart.js or D3.js.
+Add query parameters to customize the date range for reports.
