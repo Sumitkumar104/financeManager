@@ -37,15 +37,14 @@ A application(Backend Implementation) to help users manage their personal financ
 
 ```bash
 cd backend
-
-```bash
 npm install
-
-```bash
 npm start
+
+```
 
 ## **port**
 - backend will run at port 8000
+
 #### **Pre-requisites**
 - Node.js installed on your system.
 
@@ -59,3 +58,38 @@ backend/
 ├── tests/            # Jest test cases
 
 
+## **Sample API Requests**
+
+1. Register User
+
+- POST /api/users/register
+Content-Type: application/json
+Body:
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+
+2. Login User
+
+- POST /api/users/login
+Content-Type: application/json
+Body:
+{
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+
+3. Add Transaction
+
+- POST /api/transactions
+Authorization: Bearer <JWT Token>
+Content-Type: application/json
+Body:
+{
+  "amount": 100,
+  "date": "2025-01-01",
+  "category": "Food",
+  "description": "Dinner at a restaurant"
+}
